@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7ff">
+    <meta name="description" content="A process journal for redesigning Uber around group rides, shared food orders, and clearer coordination.">
+    <title>Uber Redesign — Process Journal</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b4cff'/%3E%3Ccircle cx='23' cy='32' r='7' fill='white'/%3E%3Ccircle cx='41' cy='32' r='7' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body class="gate-active">
+    <div class="project-gate" role="dialog" aria-labelledby="project-gate-title">
+      <button class="gate-button" type="button" data-open-project id="project-gate-title">Project 1 process <span aria-hidden="true">↗</span></button>
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Uber redesign process journal">
+          <span class="brand-mark">U</span>
+          <span>Uber redesign <small>process journal</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="#research">Research</a>
+          <a href="#journey">Journey</a>
+          <a href="#prototype">Prototype</a>
+          <a href="#reflection">Reflection</a>
+        </div>
+        <a class="nav-cta" href="#top">2026 ↗</a>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="top" class="hero shell">
+        <div class="hero-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="hero-eyebrow"><i></i> CLASS PROJECT · PRODUCT DESIGN WORKFLOW</div>
+        <div class="hero-layout">
+          <div>
+            <h1>Designing<br><em>Uber,</em><br>together.</h1>
+          </div>
+          <div class="hero-copy">
+            <p>I redesigned Uber around a simple question: what would change if the people who join a ride or order could help make the decision together?</p>
+            <a class="arrow-link" href="#research">Follow the process <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <div class="hero-chips" aria-label="Process themes">
+          <span>Market research</span><span>Service deep-dive</span><span>AI-assisted prototyping</span>
+        </div>
+      </section>
+
+      <section id="research" class="section shell research-section">
+        <div class="section-heading research-heading">
+          <div>
+            <span class="section-number green process-step-label"><b>STEP 01</b><i aria-hidden="true"></i><span>INITIAL PREMISE &amp; TWO STRATEGIES</span></span>
+            <h2>Deciding What to Build: Two Different Processes</h2>
+            <p class="research-intro">My redesign process unfolds in two phases: before and after deciding what to build.</p>
+          </div>
+        </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="card-meta"><span class="step-pill">Process (#1)</span><span>Before deciding</span></div>
+            <h3>Market Research</h3>
+            <p><span class="process-quote">“Find which service has bad usability + what users desire for...”</span> Exploring unvarnished friction, missed handoffs, and moments where user expectations collapse.</p>
+            <strong>⌕ &nbsp;Pinpoint user friction and desire</strong>
+          </article>
+          <article class="process-card">
+            <div class="card-meta"><span class="step-pill">Process (#2)</span><span>After narrowing down</span></div>
+            <h3>Service Deep-Dive</h3>
+            <p><span class="process-quote">“Understand existing service + what is bad/lacking + find specific contents for redesign.”</span> Deconstructing edge cases, information gaps, and structural shortcomings.</p>
+            <strong>▣ &nbsp;Define specific feature contents to redesign</strong>
+          </article>
+          <article class="process-card process-card--mint strategy-card">
+            <div class="card-meta"><span class="step-pill">Strategy #1: The mindset shift</span></div>
+            <h3>Spend more time brainstorming with AI</h3>
+            <div class="mini-note strategy-quote">“BEFORE: I think it’s easier to build with vibe coding (then before when I had to code)— so I decided to spend more time with brainstorming with AI.”</div>
+            <p>Because vibe coding makes producing code trivial, the real bottleneck shifts to whether you have a clear, distinct, high-value problem worth solving.</p>
+          </article>
+          <article class="process-card strategy-card">
+            <div class="card-meta"><span class="step-pill step-pill--dark">Strategy #2: Scope selection</span></div>
+            <h3>Change UI component VS Adding new feature</h3>
+            <div class="mini-note mini-note--blue scope-note"><span class="scope-old">Change UI component</span><strong>Adding new feature</strong><small>“I think it’s easier (for me) to add new feature with vibecoding...”</small></div>
+            <p>Generating a coherent new capability end-to-end plays to the generative strengths of LLMs more cleanly than pixel-pushing legacy components.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="focus" class="section shell focus-section">
+        <div class="section-heading focus-heading">
+          <div>
+            <span class="section-number green process-step-label"><b>STEP 02</b><i aria-hidden="true"></i><span>MIN'S RESEARCH METHODOLOGY</span></span>
+            <h2>“What are the cases where users use two different apps for the same goals?”</h2>
+            <div class="focus-intro">
+              <p>I've looked at what actions make users move between apps:</p>
+              <p>“I found or did something here, but I need to carry it somewhere else to finish.”</p>
+              <p>This led to 4 distinct exploration lenses.</p>
+            </div>
+          </div>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card"><span class="focus-icon">#1</span><span class="focus-label">APPROACH WITH</span><h3>Goals</h3><p>Starting from user intentions: what are users trying to accomplish when they find themselves juggling multiple tools?</p><div class="focus-insight"><b>INQUIRY PROMPT:</b><span>“Can you remember a recent time you switched between apps to plan, compare, or organize?”</span></div></article>
+          <article class="focus-card"><span class="focus-icon">#2</span><span class="focus-label">APPROACH WITH</span><h3>Actions</h3><p>Tracking concrete manual handoffs between interfaces when one service cuts off too soon.</p><div class="focus-insight"><b>CORE FRICTION PATTERN:</b><span>“I found or did something here, but I need to carry it somewhere else to finish.”</span></div></article>
+          <article class="focus-card"><span class="focus-icon">#3</span><span class="focus-label">APPROACH WITH</span><h3>Services</h3><p>Auditing service boundaries: where does an existing product intentionally stop serving the user's ongoing session?</p><div class="focus-insight"><b>AUDIT FOCUS:</b><span>Identifying arbitrary walled gardens and missing native utility links.</span></div></article>
+          <article class="focus-card"><span class="focus-icon">#4</span><span class="focus-label">APPROACH WITH</span><h3>Voice of User</h3><p>Gathering organic user pain directly from public forums, unfiltered complaints, and customer workarounds.</p><div class="focus-insight"><b>SOURCES MINED:</b><span>Raw qualitative threads on Reddit (r/uber) and X (Twitter).</span></div></article>
+        </div>
+      </section>
+
+      <section id="candidates" class="section shell table-section">
+        <div class="section-heading compact-heading">
+          <div><span class="section-number green">03 · SERVICE SELECTION</span><h2>3 Candidates before deciding the services…</h2></div>
+          <p>I compared three service directions against the same business and UX questions before choosing the group opportunity for Uber.</p>
+        </div>
+        <div class="candidate-table-wrap">
+          <table class="candidate-table">
+            <thead><tr><th>Evaluation question</th><th>1. Google Maps: Free restroom finder</th><th>2. BrickLink: Outside-purchase tracking</th><th class="selected-col">3. Uber: Shared costs with friends *</th></tr></thead>
+            <tbody>
+              <tr><th>Who needs it most?</th><td>Tourists exploring unfamiliar cities, delivery workers, parents, and people with specific restroom or accessibility needs.</td><td>Custom LEGO builders buying parts across multiple stores.</td><td class="selected-col">Groups of people repeatedly sharing rides, especially when participants change.</td></tr>
+              <tr><th>Would current users pay extra?</th><td>Likely low willingness. Keep essential information free: public access, cost, opening hours, and entrance directions.</td><td>Most plausible direct-payment opportunity: frequent builders can measure time saved and duplicate purchases avoided.</td><td class="selected-col">Likely limited willingness for a separate subscription. A small transaction fee or membership benefit could be tested.</td></tr>
+              <tr><th>How could the company benefit?</th><td>More frequent Maps use during outings and stronger trust in its local information.</td><td>More completed builds and repeat purchases of remaining parts.</td><td class="selected-col">More completed group bookings and repeat rides.</td></tr>
+              <tr><th>What would encourage repeat use?</th><td>Needing a restroom in another neighborhood or city, with reliable information available each time.</td><td>Starting another build or receiving another outside order.</td><td class="selected-col">Planning another outing with the same friend group.</td></tr>
+              <tr><th>Main commercial uncertainty?</th><td>Keeping availability and entry rules accurate costs money. Many potential users already use Maps, so the benefit may primarily be retention.</td><td>The feature may be too narrow for a subscription, and importing purchases could help users spend elsewhere.</td><td class="selected-col">Invitees may already use Uber. Sharing a ride can also replace several separate bookings.</td></tr>
+              <tr><th>Best early success measure?</th><td>Percentage of searches that lead to successful use of a free restroom, plus repeat feature use.</td><td>Time to reconcile an order, plus repeat purchasing.</td><td class="selected-col">Invite-to-first-booking conversion and repeat group bookings.</td></tr>
+              <tr><th>Strongest business argument?</th><td>Make Maps more useful throughout a day in an unfamiliar city.</td><td>Save committed hobbyists measurable time and money.</td><td class="selected-col">Make organizing and paying for recurring group rides easier.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="journey" class="section shell journey-section">
+        <div class="section-heading compact-heading journey-heading">
+          <div><span class="section-number green">04 · CUSTOMER JOURNEY</span><h2>Customer journey with need statement: As-is // To-be</h2></div>
+          <div class="journey-toggle" role="group" aria-label="Journey view"><button class="is-active" type="button" data-journey-view="both">As-is + To-be</button><button type="button" data-journey-view="as-is">As-is</button><button type="button" data-journey-view="to-be">To-be</button></div>
+        </div>
+        <p class="need-statement"><strong>Need statement.</strong> When a friend organizes a group outing, they need one place to coordinate the plan and each person’s commitment, so booking does not become a second job.</p>
+        <div class="journey-list">
+          <article class="journey-row">
+            <div class="journey-step"><span>STEP 01</span><h3>Plan the outing</h3><p>Friends agree on what they want to do.</p></div>
+            <div class="journey-state as-is"><b>AS-IS · COORDINATE IN CHAT</b><p>The organizer asks who is coming, compares prices, and collects answers across messages.</p><small>Friction: the plan is scattered.</small></div>
+            <div class="journey-state to-be"><b>TO-BE · START A GROUP</b><p>The organizer names the occasion and invites followed friends from the Uber flow.</p><small>Gain: one shared starting point.</small></div>
+          </article>
+          <article class="journey-row">
+            <div class="journey-step"><span>STEP 02</span><h3>Book the ride</h3><p>Someone chooses a route and vehicle.</p></div>
+            <div class="journey-state as-is"><b>AS-IS · ONE PERSON DECIDES</b><p>The lead picks a car before everyone has seen the same option or agreed to the cost.</p><small>Friction: responsibility stays with the lead.</small></div>
+            <div class="journey-state to-be"><b>TO-BE · CHOOSE TOGETHER</b><p>The group sees the route, car, and estimated allocation before the request is sent.</p><small>Gain: the choice is legible to everyone.</small></div>
+          </article>
+          <article class="journey-row">
+            <div class="journey-step"><span>STEP 03</span><h3>Split during the ride</h3><p>Payment becomes part of the experience.</p></div>
+            <div class="journey-state as-is"><b>AS-IS · SPLIT AFTER MATCHING</b><p>The group may rely on an equal split later or settle a custom amount outside the main flow.</p><small>Friction: the amount arrives late.</small></div>
+            <div class="journey-state to-be"><b>TO-BE · SHOW EXACT SHARES</b><p>Each invited rider sees the amount they would authorize, down to the cent.</p><small>Gain: no surprise allocation.</small></div>
+          </article>
+          <article class="journey-row">
+            <div class="journey-step"><span>STEP 04</span><h3>Take the ride</h3><p>The group moves from planning to doing.</p></div>
+            <div class="journey-state as-is"><b>AS-IS · WAIT FOR UPDATES</b><p>The lead carries the status of the booking and has to relay changes to everyone else.</p><small>Friction: one person becomes support.</small></div>
+            <div class="journey-state to-be"><b>TO-BE · GROUP STATUS</b><p>Everyone can see the ride status and the group chat in the same shared context.</p><small>Gain: fewer coordination messages.</small></div>
+          </article>
+          <article class="journey-row">
+            <div class="journey-step"><span>STEP 05</span><h3>Review and settle</h3><p>The experience closes without guesswork.</p></div>
+            <div class="journey-state as-is"><b>AS-IS · RECONCILE LATER</b><p>The lead may remind friends, calculate a custom share, or wait for reimbursement.</p><small>Friction: the task continues after the trip.</small></div>
+            <div class="journey-state to-be"><b>TO-BE · AUTHORIZE YOUR OWN SHARE</b><p>Each rider approves their own amount before the organizer requests the vehicle.</p><small>Gain: less work for the friend who books.</small></div>
+          </article>
+          <article class="journey-row">
+            <div class="journey-step"><span>STEP 06</span><h3>Close the occasion</h3><p>A good group moment can happen again.</p></div>
+            <div class="journey-state as-is"><b>AS-IS · END WITH A RECEIPT</b><p>The service records the trip, but not necessarily the group relationship around it.</p><small>Friction: no obvious next occasion.</small></div>
+            <div class="journey-state to-be"><b>TO-BE · KEEP THE GROUP VISIBLE</b><p>The Account hub keeps active and past groups available for another shared plan.</p><small>Gain: a reason to return together.</small></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="prototype" class="section shell prototype-section">
+        <div class="section-heading compact-heading">
+          <div><span class="section-number green">05 · MULTI-AGENT PROTOTYPE</span><h2>Multi-agent to brainstorm and prototype</h2></div>
+          <p>I divided the work into roles so the idea could be challenged, specified, built, and communicated without losing the original user problem.</p>
+        </div>
+        <div class="agent-grid">
+          <article class="agent-card"><span class="agent-avatar">☻</span><span class="agent-id">AGENT 01</span><h3>Research Agent</h3><b>Scope · signals · gaps</b><p>Collected service context and surfaced the moments worth redesigning.</p><small>Output: opportunity map</small></article>
+          <article class="agent-card"><span class="agent-avatar">☻</span><span class="agent-id">AGENT 02</span><h3>PRD Agent</h3><b>Rules · states · edge cases</b><p>Turned the concept into explicit behavior, calculations, and decision states.</p><small>Output: product requirements</small></article>
+          <article class="agent-card"><span class="agent-avatar">☻</span><span class="agent-id">AGENT 03</span><h3>Vibecoding Agent</h3><b>Flow · interface · iteration</b><p>Translated the product logic into a clickable prototype and refined the flow.</p><small>Output: working walkthrough</small></article>
+          <article class="agent-card"><span class="agent-avatar">☻</span><span class="agent-id">AGENT 04</span><h3>Presentation Prep</h3><b>Story · evidence · clarity</b><p>Shaped the research and decisions into a story another person can follow.</p><small>Output: presentation narrative</small></article>
+        </div>
+      </section>
+
+      <section id="hard" class="section shell hard-section">
+        <div class="section-heading compact-heading">
+          <div><span class="section-number coral">06 · REALITY CHECK</span><h2>What was actually hard about vibecoding</h2></div>
+          <p>Fast generation made the first draft easy. The difficult part was deciding what to keep, what to correct, and what the prototype needed to prove.</p>
+        </div>
+        <div class="quote-grid">
+          <article><span class="quote-tag">CHALLENGE 01</span><h3>“Sometimes takes a lot of time, but I don’t know what’s going on.”</h3><p>When the system changes several things at once, it becomes hard to identify the decision behind each change.</p></article>
+          <article><span class="quote-tag mint">PRACTICE 02</span><h3>“Easy to go with top-down, because it’s easy to build…”</h3><p>Starting broad helps create momentum, but the important constraints still need to be added deliberately.</p></article>
+          <article><span class="quote-tag blue">PRACTICE 03</span><h3>“Giving great examples is the way I can communicate easily.”</h3><p>A concrete screen, state, or sentence often communicates the intended direction better than an abstract request.</p></article>
+        </div>
+      </section>
+
+      <section id="reflection" class="section shell reflection-section">
+        <div class="pain-panel">
+          <span class="pain-kicker">⚠ &nbsp;KEY FRICTION POINT</span>
+          <div class="pain-divider" aria-hidden="true"></div>
+          <h2>Pain points when designing with AI:</h2>
+          <p class="pain-lead">“UI generation and prototyping felt seamless, but ideation and early discovery were surprisingly difficult.”</p>
+          <p class="pain-sublead">A breakdown of where raw generative prompting struggles during ambiguous, early-stage feature exploration:</p>
+          <div class="pain-grid">
+            <article><span>×</span><div><h3>Uncertain Where to Begin</h3><p>Blank-prompt paralysis when opening an open-ended session without clear constraints or an established rubric.</p></div></article>
+            <article><span>×</span><div><h3>Struggling to Steer Toward Strong Answers</h3><p>Guiding the model beyond predictable tropes, surface-level suggestions, and generic patterns.</p></div></article>
+            <article><span>×</span><div><h3>Defining What 'Good Enough' Looks Like</h3><p>When an LLM produces dozens of options in seconds, evaluating them objectively without a clear benchmark is challenging.</p></div></article>
+            <article><span>×</span><div><h3>Filtering Through Mediocre Outputs</h3><p>“The options often feel generic or uninspired, making it frustrating to commit to any of them as a solid foundation.”</p></div></article>
+          </div>
+          <div class="pain-question"><span aria-hidden="true">❞</span><p>“I can sense that the generated output isn't quite right, but it's hard to articulate what the right solution should be.”</p></div>
+        </div>
+        <div class="reflection-card">
+          <h2>“Are LLMs limited at creative ideation, or are we still mastering how to guide them toward our vision?”</h2>
+          <div class="reflection-columns">
+            <div><span>✓</span><p><b>Systematic Task Architecture</b><br>Designing with AI thrives on structured workflows: breaking complex challenges into clear milestones unlocks consistent, high-impact results.</p></div>
+            <div><span>✓</span><p><b>Fluid Multi-Tool Synergy</b><br>Mastering smooth transitions between specialized tools—bridging ChatGPT, Astra, Stitch UI, and AI Studio—creates an effortless, end-to-end creative flow.</p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="shell footer-inner"><div><strong>Uber redesign</strong><p>A class-project process journal about research, product thinking, and AI-assisted making.</p></div><div class="footer-links"><span>PROCESS</span><a href="#research">Research</a><a href="#journey">Customer journey</a><a href="#prototype">Prototype</a><a href="#reflection">Reflection</a></div></div></footer>
+  </body>
+</html>
