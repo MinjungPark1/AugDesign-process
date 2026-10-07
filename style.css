@@ -27,7 +27,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--violet); outlin
 body.gate-active { min-height: 100svh; overflow: hidden; }
 body.gate-active > .site-header, body.gate-active > main, body.gate-active > .footer, body.gate-active > .skip-link { display: none; }
 .project-gate { display: grid; place-items: center; min-height: 100svh; background: var(--paper); }
-.gate-button { display: inline-flex; align-items: center; gap: 12px; padding: 14px 20px; border: 1px solid var(--violet); border-radius: 999px; background: #fff; color: var(--ink); box-shadow: 0 9px 22px rgba(91, 76, 255, .12); font-size: 14px; font-weight: 800; }
+.gate-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px; padding: 24px; }
+.gate-button { text-decoration: none; display: inline-flex; align-items: center; gap: 12px; padding: 14px 20px; border: 1px solid var(--violet); border-radius: 999px; background: #fff; color: var(--ink); box-shadow: 0 9px 22px rgba(91, 76, 255, .12); font-size: 14px; font-weight: 800; }
 .gate-button:hover { background: var(--lavender); transform: translateY(-1px); }
 .gate-button span { color: var(--green); font-size: 18px; line-height: 1; }
 main:focus { outline: none; }
